@@ -1,0 +1,148 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_productName",
+				"type": "string"
+			},
+			{
+				"name": "_productID",
+				"type": "uint256"
+			},
+			{
+				"name": "_milk",
+				"type": "uint256"
+			},
+			{
+				"name": "_egg",
+				"type": "uint256"
+			},
+			{
+				"name": "_wheat",
+				"type": "uint256"
+			},
+			{
+				"name": "_soya",
+				"type": "uint256"
+			},
+			{
+				"name": "_nuts",
+				"type": "uint256"
+			},
+			{
+				"name": "_shellfish",
+				"type": "uint256"
+			}
+		],
+		"name": "addProductIngredients",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_searchProductbyID",
+				"type": "uint256"
+			}
+		],
+		"name": "searchProductIngredients",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "size",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "dAppPurpose",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
