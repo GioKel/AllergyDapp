@@ -83,53 +83,53 @@
 								Προσθήκη προιόντος στο blockchain
 							</p>
 							<div id="addForm">
-								<form>
+								<form class="was-validated">
 								  <div class="mb-3 row">
 								    <label for="productName" class="col-sm-2 col-form-label">productName</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="productName" value="">
+								    	<input type="text" class="form-control" id="productName" value="" required>
 								    </div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="productID" class="col-sm-2 col-form-label">productID</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="productID" value="">
+								    	<input type="text" class="form-control" id="productID" value="" required>
 							    	</div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="milk" class="col-sm-2 col-form-label">milk</label>
 								    <div class="col-sm-5">
-								 	   <input type="text" class="form-control" id="milk" value="">
+								 	   <input type="text" class="form-control" id="milk" value="" required>
 							 	   </div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="egg" class="col-sm-2 col-form-label">egg</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="egg" value="">
+								    	<input type="text" class="form-control" id="egg" value="" required>
 							    	</div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="wheat" class="col-sm-2 col-form-label">wheat</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="wheat" value="">
+								    	<input type="text" class="form-control" id="wheat" value="" required>
 								    </div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="soya" class="col-sm-2 col-form-label">soya</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="soya" value="">
+								    	<input type="text" class="form-control" id="soya" value="" required>
 								    </div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="nuts" class="col-sm-2 col-form-label">nuts</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="nuts" value="">
+								    	<input type="text" class="form-control" id="nuts" value="" required>
 								    </div>
 								  </div>
 								  <div class="mb-3 row">
 								    <label for="shellfish" class="col-sm-2 col-form-label">shellfish</label>
 								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="shellfish" value="">
+								    	<input type="text" class="form-control" id="shellfish" value="" required>
 								    </div>
 								  </div>
 								</form>
@@ -164,15 +164,18 @@
 								<p class="lead">
 									Αναζήτηση προιόντος στο blockchain
 								</p>
-								<form>
-								  <div class="mb-3 row">
-								    <label for="sProductID" class="col-sm-2 col-form-label">productID</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="sProductID" value="">
-								    </div>
-								  </div>
+								<form class="was-validated">
+									  <div class="mb-3 row">
+									    <label for="sProductID" class="col-sm-2 col-form-label">productID</label>
+									    <div class="col-sm-5 ">
+									    	<input type="text" class="form-control is-invalid" id="sProductID" value="" required>
+									    	<div class="invalid-feedback">
+									 		    Please enter a product id.
+									  		</div>
+									    </div>
+									  </div>
+									<button id="searchButton" class="btn btn-primary btn-block mb-3" disabled>Search</button>
 								</form>
-								<button id="searchButton" class="btn btn-primary btn-block mb-3" disabled>Search</button>
 							</div>
 							<div id="searchResult" class="invisible">
 								<table class="table">
