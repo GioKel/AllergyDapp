@@ -27,7 +27,7 @@ module.exports = {
           flatten: true,
           from: './*',
           globOptions: {
-            ignore: ['**/*.json','**/*.properties'],
+            ignore: ['**/*.json','**/*.md'],
           },
         },
       ],
