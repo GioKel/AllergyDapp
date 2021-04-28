@@ -1,1 +1,1 @@
-# AllergyDapp Web Client
+# Smart Contract AllergyDapp
