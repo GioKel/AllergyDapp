@@ -38,15 +38,15 @@ const nuts = document.getElementById('nuts');
 const shellfish = document.getElementById('shellfish');
 const sProductID = document.getElementById('sProductID');
 
-//Tabs
+// Tabs
 const addProductIgredientsTab = document.getElementById('addProductIgredients');
 const searchProductIgredientsTab = document.getElementById('searchProductIgredients');
 
-//Tab links
+// Tab links
 const addLink = document.getElementById('addLink');
 const searchLink = document.getElementById('searchLink');
 
-//Table
+// Table
 const searchResultContainer = document.getElementById('searchResult');
 const spinner = document.getElementById('spinner');
 const loadingText = document.getElementById('loadingText');
@@ -57,7 +57,7 @@ const initialize = async () => {
 	  let onboarding
 	  try {
 		    onboarding = Metamask.MetaMaskOnboarding
-//		    onboarding = MetaMaskOnboarding
+// onboarding = MetaMaskOnboarding
 	  } catch (error) {
 	    console.error(error)
 	  }
@@ -150,7 +150,8 @@ const initialize = async () => {
 				  var allergydContract = new web3.eth.Contract(abi,
 						  '0xa92815Fcf37A1f7Fd6a0AB6d8d97352Bc82611Ad',
 						  {
-						    from: ethereum.selectedAddress // default from address
+						    from: ethereum.selectedAddress // default from
+															// address
 						});
 	        	  allergydContract.defaultChain= "rinkeby";
 	        	  console.log(allergydContract);
@@ -192,7 +193,7 @@ const initialize = async () => {
 				spinner.setAttribute("class", spinner.getAttribute("class")+ " visually-hidden");
 				loadingText.setAttribute("class", loadingText.getAttribute("class")+ " visually-hidden");
 				submitButton.disabled = false
-			  ///////////////////////////////////////////////////////////////
+			  // /////////////////////////////////////////////////////////////
 		  }
 		  
 		  searchButton.onclick = async () => {
@@ -209,7 +210,8 @@ const initialize = async () => {
 				  var allergydContract = new web3.eth.Contract(abi,
 						  '0xa92815Fcf37A1f7Fd6a0AB6d8d97352Bc82611Ad',
 						  {
-						    from: ethereum.selectedAddress // default from address
+						    from: ethereum.selectedAddress // default from
+															// address
 						});
 	        	  allergydContract.defaultChain= "rinkeby";
 	        	  console.log(allergydContract);
@@ -241,7 +243,7 @@ const initialize = async () => {
 		        }
 			  
 			  
-			  ///////////////////////////////////////////////////////////////
+			  // /////////////////////////////////////////////////////////////
 		  }
 	  }
 	  
@@ -354,7 +356,7 @@ if (typeof web3 !== 'undefined') {
 } else {
     console.log("B")
     // set the provider you want from Web3.providers
-//    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+// web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
 
 window.addEventListener('DOMContentLoaded', initialize)

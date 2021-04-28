@@ -1,212 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	    <!-- Bootstrap CSS -->
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	  <!--   <link href="../static/css/style-main.css" rel="stylesheet">-->
-		
-		<title>AllergydApp</title>
-	</head>
-	<body>
-		
-			<nav class="navbar navbar-static-top navbar-light bg-light">
-			  <div class="container-fluid">
-			    <span class="navbar-brand mb-0 h1">AllergydApp</span>
-			  </div>
-			</nav>
-			
-    		<main role="main" class="container">
-    			<section>
-			        <h5 class="card-title">
-			          Wallet Account
-			        </h5>
-			
-			        <div class="row">
-			          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
-			            <p class="info-text alert alert-success">
-			              Connected Acount: <span id="accounts"></span>
-			            </p>
-			          </div>
-			        </div>
-			      </section>
-			    			
-				<section>
-					
-				</section>  	
-				
-				<section>
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="add-tab" data-bs-toggle="tab" data-bs-target="#add" type="button" role="tab" aria-controls="add" aria-selected="false">Add Product</button>
-					  </li>
-					  <li class="nav-item" role="presentation">
-					    <button class="nav-link" id="search-tab" data-bs-toggle="tab" data-bs-target="#search" type="button" role="tab" aria-controls="search" aria-selected="false">Search Product</button>
-					  </li>
-					</ul>
-					<div class="tab-content" id="myTabContent">
-					    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-					    	<div class="row d-flex justify-content-center">
-							    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
-							      <div class="card">
-							        <div class="card-body">
-							          <h5 class="card-title">
-							            MetaMask Wallet Status
-							          </h5>
-							
-							          <button class="btn btn-primary btn-lg btn-block mb-3" id="connectButton" disabled>
-							            Connect
-							          </button>
-							
-							          <button class="btn btn-primary btn-lg btn-block mb-3 visible" id="getAccounts">
-							            eth_accounts
-							          </button>
-							
-							          <p class="info-text alert alert-secondary visible">
-							            eth_accounts result: <span id="getAccountsResult"></span>
-							          </p>
-							        </div>
-							      </div>
-							    </div>
-							  </div>
-						</div>
-						
-						<div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
-							
-							<p class="lead">
-								Προσθήκη προιόντος στο blockchain
-							</p>
-							<div id="addForm">
-								<form>
-								  <div class="mb-3 row">
-								    <label for="productName" class="col-sm-2 col-form-label">productName</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="productName" value="" required>
-								    </div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="productID" class="col-sm-2 col-form-label">productID</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="productID" value="" required>
-							    	</div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="milk" class="col-sm-2 col-form-label">milk</label>
-								    <div class="col-sm-5">
-								 	   <input type="text" class="form-control" id="milk" value="" required>
-							 	   </div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="egg" class="col-sm-2 col-form-label">egg</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="egg" value="" required>
-							    	</div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="wheat" class="col-sm-2 col-form-label">wheat</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="wheat" value="" required>
-								    </div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="soya" class="col-sm-2 col-form-label">soya</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="soya" value="" required>
-								    </div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="nuts" class="col-sm-2 col-form-label">nuts</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="nuts" value="" required>
-								    </div>
-								  </div>
-								  <div class="mb-3 row">
-								    <label for="shellfish" class="col-sm-2 col-form-label">shellfish</label>
-								    <div class="col-sm-5">
-								    	<input type="text" class="form-control" id="shellfish" value="" required>
-								    </div>
-								  </div>
-								</form>
-								<button id="submitButton" class="btn btn-primary btn-block mb-3" disabled>
-									<span id="spinner" class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"></span>
-  									<span id="loadingText" class="visually-hidden">Loading...</span>
-  									<span id="submitText" class="" >Submit</span>
-  								</button>
-							</div>
-							
-							<!-- Modal -->
-							<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							  <div class="modal-dialog">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <h5 class="modal-title" id="exampleModalLabel">Αποτέλεσμα Smart Contract</h5>
-							        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-							      </div>
-							      <div class="modal-body" id="addProductModalText">
-							        
-							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-							      </div>
-							    </div>
-							  </div>
-							</div>
-						</div>
-						
-						<div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
-							<div id="searchForm" class="visible">
-								<p class="lead">
-									Αναζήτηση προιόντος στο blockchain
-								</p>
-								<form>
-									  <div class="mb-3 row">
-									    <label for="sProductID" class="col-sm-2 col-form-label">productID</label>
-									    <div class="col-sm-5 ">
-									    	<input type="text" class="form-control" id="sProductID" value="" required>
-									    </div>
-									  </div>
-								</form>
-								<button id="searchButton" class="btn btn-primary btn-block mb-3" disabled>Search</button>
-							</div>
-							<div id="searchResult" class="invisible">
-								<table class="table">
-								  <thead>
-								    <tr>
-								      <th scope="col">#</th>
-								      <th scope="col">Product</th>
-								      <th scope="col">Milk</th>
-								      <th scope="col">Egg</th>
-								      <th scope="col">Wheat</th>
-								      <th scope="col">Soya</th>
-								      <th scope="col">Nuts</th>
-								      <th scope="col">Shellfish</th>
-								    </tr>
-								  </thead>
-								  <tbody id="searchResultBody">
-								  </tbody>
-								</table>
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+	crossorigin="anonymous">
+
+<!--   <link href="../static/css/style-main.css" rel="stylesheet">-->
+
+<title>AllergydApp</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-static-top navbar-light bg-light">
+		<div class="container-fluid">
+			<span class="navbar-brand mb-0 h1">AllergydApp</span>
+		</div>
+	</nav>
+
+	<main role="main" class="container">
+		<section>
+			<h5 class="card-title">Wallet Account</h5>
+
+			<div class="row">
+				<div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+					<p class="info-text alert alert-success">
+						Connected Acount: <span id="accounts"></span>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section></section>
+
+		<section>
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+						data-bs-target="#home" type="button" role="tab"
+						aria-controls="home" aria-selected="true">Home</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="add-tab" data-bs-toggle="tab"
+						data-bs-target="#add" type="button" role="tab" aria-controls="add"
+						aria-selected="false">Add Product</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="search-tab" data-bs-toggle="tab"
+						data-bs-target="#search" type="button" role="tab"
+						aria-controls="search" aria-selected="false">Search
+						Product</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home" role="tabpanel"
+					aria-labelledby="home-tab">
+					<div class="row d-flex justify-content-center">
+						<div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">MetaMask Wallet Status</h5>
+
+									<button class="btn btn-primary btn-lg btn-block mb-3"
+										id="connectButton" disabled>Connect</button>
+
+									<button class="btn btn-primary btn-lg btn-block mb-3 visible"
+										id="getAccounts">eth_accounts</button>
+
+									<p class="info-text alert alert-secondary visible">
+										eth_accounts result: <span id="getAccountsResult"></span>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</section>			
-    		</main>
-    		
-    
-			<nav class="navbar fixed-bottom navbar-light bg-light">
-				<div class="container-md">
-					<p>COPYRIGHT © 2021 Natalia's Project. ALL RIGHTS RESERVED.
-					</p>
 				</div>
-			</nav>
 
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<!-- 	  <script src="../node_modules/@metamask/onboarding/dist/metamask-onboarding.bundle.js" defer></script> -->
-	    <script type="module" src="./bundle.js" defer></script> 
-	</body>
+				<div class="tab-pane fade" id="add" role="tabpanel"
+					aria-labelledby="add-tab">
+
+					<p class="lead">Προσθήκη προιόντος στο blockchain</p>
+					<div id="addForm">
+						<form>
+							<div class="mb-3 row">
+								<label for="productName" class="col-sm-2 col-form-label">productName</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="productName"
+										value="" required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="productID" class="col-sm-2 col-form-label">productID</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="productID" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="milk" class="col-sm-2 col-form-label">milk</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="milk" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="egg" class="col-sm-2 col-form-label">egg</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="egg" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="wheat" class="col-sm-2 col-form-label">wheat</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="wheat" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="soya" class="col-sm-2 col-form-label">soya</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="soya" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="nuts" class="col-sm-2 col-form-label">nuts</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="nuts" value=""
+										required>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="shellfish" class="col-sm-2 col-form-label">shellfish</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="shellfish" value=""
+										required>
+								</div>
+							</div>
+						</form>
+						<button id="submitButton" class="btn btn-primary btn-block mb-3"
+							disabled>
+							<span id="spinner"
+								class="spinner-border spinner-border-sm visually-hidden"
+								role="status" aria-hidden="true"></span> <span id="loadingText"
+								class="visually-hidden">Loading...</span> <span id="submitText"
+								class="">Submit</span>
+						</button>
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="resultModal" tabindex="-1"
+						aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Αποτέλεσμα
+										Smart Contract</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body" id="addProductModalText"></div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="search" role="tabpanel"
+					aria-labelledby="search-tab">
+					<div id="searchForm" class="visible">
+						<p class="lead">Αναζήτηση προιόντος στο blockchain</p>
+						<form>
+							<div class="mb-3 row">
+								<label for="sProductID" class="col-sm-2 col-form-label">productID</label>
+								<div class="col-sm-5 ">
+									<input type="text" class="form-control" id="sProductID"
+										value="" required>
+								</div>
+							</div>
+						</form>
+						<button id="searchButton" class="btn btn-primary btn-block mb-3"
+							disabled>Search</button>
+					</div>
+					<div id="searchResult" class="invisible">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Product</th>
+									<th scope="col">Milk</th>
+									<th scope="col">Egg</th>
+									<th scope="col">Wheat</th>
+									<th scope="col">Soya</th>
+									<th scope="col">Nuts</th>
+									<th scope="col">Shellfish</th>
+								</tr>
+							</thead>
+							<tbody id="searchResultBody">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<nav class="navbar fixed-bottom navbar-light bg-light">
+		<div class="container-md">
+			<p>COPYRIGHT © 2021 Natalia's Project. ALL RIGHTS RESERVED.</p>
+		</div>
+	</nav>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
+	<!-- 	  <script src="../node_modules/@metamask/onboarding/dist/metamask-onboarding.bundle.js" defer></script> -->
+	<script type="module" src="./bundle.js" defer></script>
+</body>
 </html>
