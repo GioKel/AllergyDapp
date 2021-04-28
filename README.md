@@ -1,1 +1,1 @@
-# AllergyDapp
+# AllergyDapp Web Client
