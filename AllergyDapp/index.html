@@ -83,7 +83,7 @@
 								Προσθήκη προιόντος στο blockchain
 							</p>
 							<div id="addForm">
-								<form class="was-validated">
+								<form>
 								  <div class="mb-3 row">
 								    <label for="productName" class="col-sm-2 col-form-label">productName</label>
 								    <div class="col-sm-5">
@@ -164,18 +164,15 @@
 								<p class="lead">
 									Αναζήτηση προιόντος στο blockchain
 								</p>
-								<form class="was-validated">
+								<form>
 									  <div class="mb-3 row">
 									    <label for="sProductID" class="col-sm-2 col-form-label">productID</label>
 									    <div class="col-sm-5 ">
-									    	<input type="text" class="form-control is-invalid" id="sProductID" value="" required>
-									    	<div class="invalid-feedback">
-									 		    Please enter a product id.
-									  		</div>
+									    	<input type="text" class="form-control" id="sProductID" value="" required>
 									    </div>
 									  </div>
-									<button id="searchButton" class="btn btn-primary btn-block mb-3" disabled>Search</button>
 								</form>
+								<button id="searchButton" class="btn btn-primary btn-block mb-3" disabled>Search</button>
 							</div>
 							<div id="searchResult" class="invisible">
 								<table class="table">
